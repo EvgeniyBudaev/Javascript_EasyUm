@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Проверка условий</title>
+<meta charset="utf-8">
+<script src="../../assert/assert.js"></script>
+<script src="../../utils/random.js"></script>
+<link rel="stylesheet" type="text/css" href="../../assert/assert.css">
+</head>
+<body>
+<script>
+/*
+Задание
+Необязательный блок else («иначе») выполняется, если условие неверно:
+
+1. Запустите программу и попробуйте угадать число
+
+*/
+
+var number = randint(1, 5);
+alert("Угадай число между 1 и 5");
+guess = prompt("Введите число от 1 до 5: ", 0);
+
+if (number == guess) {
+    alert("Поздравляю! Вы угадали число: " + number)
+} else {
+    alert("Печалька ;( Попробуй удачу снова.")
+}
+
+</script>
+</body>
+</html>
+

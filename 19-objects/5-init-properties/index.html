@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <title>Объявление со свойствами</title>
+</head>
+<body>
+<script>
+/*
+Объект можно заполнить значениями при создании, указав их в фигурных скобках: { ключ1: значение1, ключ2: значение2, ... }.
+Такой синтаксис называется литеральным (англ. literal).
+
+Задание
+1. Объявите объект player со свойствами:
+  player.name == 'Tron'
+  player.age  == 120
+  player.health == 80
+  player.skills == ['intellect', 'attack', 'defense']
+  player.position == { x: 100, y 200 }
+
+*/
+
+var player = {
+    name: 'Tron',
+    age: 120,
+    health: 120,
+    skills: ['intellect', 'attack', 'defense'],
+    positon: {x:100, y:200}
+   // написать тут свойства
+};
+
+
+assert(player.name && player.name == 'Tron', 'Свойство name должно содержать имя "Tron"');
+assert(player.age && player.age == 120, 'Свойство age должно содержать возраст равный 120');
+assert(player.health && player.health == 120, 'Свойство age должно содержать возраст равный 120');
+assert(player.skills && compareArrays(player.skills, ['intellect', 'attack', 'defense']), 'Свойство skills должно содержать массив навыков (скилов)');
+assert(player.positon && player.positon.x == 100, 'Позиция игрока по x должна быть равна 100');
+assert(player.positon && player.positon.y == 200, 'Позиция игрока по y должна быть равна 200');
+
+
+</script>
+</body>
+</html>

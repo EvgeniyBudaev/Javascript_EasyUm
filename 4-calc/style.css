@@ -1,0 +1,22 @@
+.calculator {
+    width: 400px;
+}
+
+.calculator__buttons-area {
+    margin-bottom: 20px;
+}
+
+.calculator__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calculator__col {
+    width: 100%;
+}
+
+.calculator__button {
+    width: 100%;
+    font-size: 30px;
+    border: 1px solid #eee;
+}

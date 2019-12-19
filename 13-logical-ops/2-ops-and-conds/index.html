@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../assert/assert.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../assert/assert.css">
+    <title>Операторы и условия</title>
+</head>
+<body>
+<script>
+/*
+    Задание
+    1. Напишите условие if для проверки того факта, что переменная age находится между 18 и 65 включительно.
+    «Включительно» означает, что концы промежутка включены, то есть age может быть равна 14 или 90.
+    
+    Псевдокод:
+    ЕСЛИ age находится между 18 и 65 включительно, то
+        alert('Вы еще трудоспособны!');
+    ИНАЧЕ
+        alert('Вам пора на пенсию!');
+*/
+var age = parseInt(prompt('Введите Ваш возраст: ', ''));
+
+// допишите программу
+    if(age >=18 && age <=65){
+        alert('Вы еще трудоспособны!');
+    } else {
+        alert('Вам пора на пенсию!');
+    }
+
+</script>
+</body>
+</html>

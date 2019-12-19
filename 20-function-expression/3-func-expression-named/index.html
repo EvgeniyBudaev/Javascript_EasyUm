@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <title>Объявление Function Expression</title>
+</head>
+<body>
+<script>
+/*
+Задание
+1. Вызовите функцию func со значением 2 вместо __
+
+*/
+var __ = undefined;
+
+var func = function kg2gramm(kg) {
+    return kg * 1000;
+};
+
+var reuslt = func(2);
+
+assert(reuslt == 2000, 'result1 == 2000');
+
+</script>
+</body>
+</html>

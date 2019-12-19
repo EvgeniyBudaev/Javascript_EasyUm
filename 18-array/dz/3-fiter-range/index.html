@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../assert/assert.css">
+    <script src="../../../assert/assert.js"></script>
+    <title>Фильтр диапазона</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+Создайте функцию filterRange(arr, a, b), которая принимает массив чисел arr 
+и возвращает новый массив, который содержит только числа из arr из диапазона от a до b. 
+То есть, проверка имеет вид a ≤ arr[i] ≤ b. Функция не должна менять arr.
+*/
+
+function filterRange(arr, from, to) {
+    var result = [];
+    for (let i = 0; i < arr.length; i++) {
+        const element = arr[i];
+        if (from <= element && element <= to) {
+            result.push(element);
+        }
+    }
+    return result;
+}
+
+var arr = [5, 4, 3, 8, 0];
+
+
+assert(compareArrays(filterRange(arr, 3, 5), [5, 4, 3]), "filterRange(arr, 3, 5) должно вернуть [5, 4, 3]"); 
+assert(compareArrays(filterRange(arr, 0, 0), [0]), "filterRange(arr, 0, 0) должно вернуть [0]");      
+assert(compareArrays(filterRange(arr, 0, 10), [5, 4, 3, 8, 0]), "filterRange(arr, 0, 10) должно вернуть [5, 4, 3, 8, 0]");
+
+
+</script>
+</body>
+</html>

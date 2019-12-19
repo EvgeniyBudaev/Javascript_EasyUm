@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Проверка условий</title>
+<meta charset="utf-8">
+<script src="../../assert/assert.js"></script>
+<link rel="stylesheet" type="text/css" href="../../assert/assert.css">
+</head>
+<body>
+<script>
+/*
+Задание
+1. Запустите программу и введите текущий год
+2. Что происходит, если ввести 2019 год?
+3. Что происходит, если ввести отличный от 2019 год?
+
+Оператор if (...) вычисляет и преобразует выражение в скобках к логическому типу.
+
+В логическом контексте:
+Число 0, пустая строка "", null и undefined, а также NaN являются false,
+Остальные значения – true.
+
+*/
+
+var currentYear = prompt('Какой сейчас год?', 0);
+
+if (currentYear == 2019) {
+    alert( 'Правильно, сейчас 2019 год на дворе' );
+}
+
+</script>
+</body>
+</html>
+

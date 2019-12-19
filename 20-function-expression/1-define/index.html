@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <title>Объявление функции</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+1. Замените __ на вызов функций func1() с аргументом 2 и func2() с аргументом 5
+
+
+*/
+var __ = undefined;
+
+/*
+Объявляем функцию kg2gramm и как бы говорит интерпретатору "создай функцию и помести её в переменную kg2gramm
+*/
+function kg2gramm(kg) {
+    return kg * 1000;
+}
+
+var func1 = kg2gramm;  // копируем ссылку на функцию в новую переменную func1
+var func2 = kg2gramm;  // копируем ссылку на функцию в новую переменную func2
+
+// вызовите func1 и func2 под комментарием
+var result1 = func1(2);
+var result2 = func2(5);
+
+
+assert(result1 == 2000, 'result1 == 2000');
+assert(result2 == 5000, 'result2 == 5000');
+
+</script>
+</body>
+</html>

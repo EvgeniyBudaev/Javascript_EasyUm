@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Просто цикл while</title>
+</head>
+<body>
+<script>
+
+/*
+Задание 1
+1. Запустите программу и посмотрите, сколько раз программа выведет строку "Спасибо, что запустили меня!:)"
+2. Измените значение переменной number с 1 на 3 и запустите программу, посмотрите на результат. Что поменялось?
+3. Замените number на значение 5 или больше. Запустите и посмотрети, что теперь выводит программа.
+4. Заметили переменную debug? Измените значение с False на True и вновь запустите.
+*/
+
+var number = 1;
+var debug = true;
+
+console.log("Привет! Запускаю цикл while:");
+
+while (number < 5) {
+    console.log("Спасибо, что запустили меня!");
+    number = number + 1;
+
+    if (debug) {
+        console.log("Увеличиваю переменную number на 1, теперь number равно " + number);
+    }
+}
+
+console.log("\nЦикл while закончил свою работу. Прощайте!;)")
+
+
+</script>
+</body>
+</html>

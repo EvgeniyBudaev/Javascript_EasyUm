@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../utils/random.js"></script>
+    <title>Игра Угадай число</title>
+</head>
+<body>
+<script>
+/*
+Задание:
+1. Исследовать программу и исправить ошибку, что когда пользователь угадывает число, нечего не происходит
+*/
+
+var attempts, guess, myName, number;
+guess = 0;
+attempts = 1;
+
+myName = prompt("Привет! Как тебя зовут?", '');
+number = randint(1, 20);
+console.log("Что ж, " + myName + ", я загадываю число от 1 до 20.");
+
+// 1. если пользователь угадал
+// 2. если закончилось число попыток
+while ((guess !== number) && (attempts < 10)) {
+    console.log("Попробуй угадать.");
+    guess = Number.parseInt(prompt('Введите число: ', ''));
+
+    if (guess < number) {
+        console.log("Твое число слишком маленькое.");
+    }
+
+    if (guess > number) {
+        console.log("Твое число слишком большое.");
+    }
+
+    attempts += 1;
+}
+if (guess === number) {
+    attempts = attempts.toString();
+    console.log("Отлично, " + myName + "! Ты справился за " + attempts + " попытки!");
+} else if (guess !== number) {
+    number = number.toString();
+    console.log("Увы. Я загадала число " + number + ".");
+}
+</script>
+</body>
+</html>

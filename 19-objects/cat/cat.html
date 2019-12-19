@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+/*
+Cat
+свойства
+- name
+- health   от 1 до 100
+- hungry   от 1 до 100
+- happines от 1 до 100
+
+методы
+- feed() -> hungry -= 10 health += 2 happines += 3
+- play() -> happines += 20
+- passDay() -> hungry += 30 happines -= 10
+*/
+function Cat(name) {
+    this.name = name;
+    this.health = 100;
+    this.hungry = 100;
+    
+    this.feed = function () {
+        this.hungry -= 10;
+    }
+
+    this.passDay = function () {
+        if (this.hungry <= 80) {
+            this.hungry += 20;
+        }
+    }
+
+    this.info = function () {
+        console.log(`Cat name: ${this.name} health: ${this.health} hungry: ${this.hungry}`);
+    }
+}
+
+var catBarsik = new Cat('Barsik');
+catBarsik.info();
+catBarsik.feed();
+catBarsik.passDay();
+catBarsik.info();
+
+
+/*
+var catMurzik = new Cat('Murzik');
+console.log(catMurzik.name);
+*/
+</script>
+</body>
+</html>

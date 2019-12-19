@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Исправьте регистр в именах переменных</title>
+    <link rel="stylesheet" href="../../../assert/assert.css">
+    <script src="../../../assert/assert.js"></script>
+</head>
+<body>
+<script>
+/*
+Задание
+Исправьте объявления переменных так, чтобы их имена были в camelCase.
+*/
+
+// Объявление переменных
+var catAge;
+var properCamelCase;
+var titleCaseOver;
+
+// Присвоение значений
+catAge = 10;
+properCamelCase = "A String";
+titleCaseOver = 9000;
+
+assert(catAge == 10, "переменная catAge должна содержать значение 10")
+assert(properCamelCase == "A String", "переменная properCamelCase должна содержать строку 'A String'")
+assert(titleCaseOver == 9000, "Переменная titleCaseOver должна содержать значение 9000")
+
+</script>
+</body>
+</html>

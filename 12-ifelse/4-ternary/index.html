@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Проверка условий</title>
+<meta charset="utf-8">
+<script src="../../assert/assert.js"></script>
+<script src="../../utils/random.js"></script>
+<link rel="stylesheet" type="text/css" href="../../assert/assert.css">
+</head>
+<body>
+<script>
+/*
+Задание
+1. Перепишите условие используя тернарный оператор: условие ? значение1 : значение2 ;
+
+Иногда нужно в зависимости от условия присвоить значение переменной.
+Например условие:
+if (a > b ) {
+    c = a;
+} else {
+    c = b;
+}
+
+Можно переписать в сокращенной форме используя тернарный оператор:
+c = a > b ? a : b
+
+*/
+
+var access;
+var age = prompt('Сколько вам лет?', '');
+
+// замените условие ниже на тернарный оператор
+if (age >= 18) {
+  access = true;
+} else {
+  access = false;
+}
+
+if (access) {
+    alert('Добро пожаловать 18+')
+} else {
+    alert('Вам еще нет 18! :(')
+}
+
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Создаем переменную</title>
+  <meta charset="utf-8">
+  <script src="../../assert/assert.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../assert/assert.css">
+</head>
+<body>
+<script>
+/*
+    Задание
+    1. Объявите переменные firstName и lastName при помощи ключевого слова var
+    2. Присвойте firstName значение 'Petya', а переменной lastName значение 'Ivanov'
+    3. Для краткости совместите объявление переменной и запись данных.
+    4. Попробуйте объявить несколько переменных firstName и lastName сразу, например: var user = 'John', age = 25;
+*/
+
+var firstName = 'Petya';
+var lastName = 'Ivanov';
+
+
+// Проверочный код под комментарием не трогаем!
+assert(typeof(firstName) !== "undefined", 'Объявите переменную firstName при помощи ключевого слова var')
+assert(typeof(lastName) !== "undefined", 'Объявите переменную lastName при помощи ключевого слова var')
+
+if (typeof(firstName) !== "undefined") {
+    assert(firstName == 'Petya', 'Присвойте значение значение \'Petya\'');
+    console.log("firstName: " + firstName)
+}
+
+if (typeof(lastName) !== "undefined") {
+    assert(lastName == 'Ivanov', 'Присвойте значение значение \'Ivanov\'');
+    console.log("lastName: " + lastName)
+}
+
+</script>
+</body>
+</html>
+

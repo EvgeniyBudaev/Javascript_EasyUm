@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Метод splice()</title>
+</head>
+<body>
+<script>
+/*
+Метод splice() изменяет содержимое массива, удаляя существующие элементы и/или добавляя новые.
+Синтаксис: array.splice(start, deleteCount[, item1[, item2[, ...]]])
+  start - индекс, по которому начинает изменять массив. 
+  deleteCount - Целое число, показывающее количество старых удаляемых из массива элементов. 
+                Если deleteCount равен 0, элементы не удаляются.
+  itemN - Необязательные параметры. Добавляемые к массиву элементы. 
+          Если вы не укажете никакого элемента, splice() просто удалит элементы из массива.
+
+Задание.
+1. Добавьте в массив products элементы 'orange' и 'banana'  по второму индексу при помощи splice
+2. Удалите 'orange' при помощи splice()
+3. Добавьте в конец массива элементы 'rice', 'apple' после banana и перед milk при помощи splice()
+*/
+
+var products = ['water', 'sugar', 'milk', 'bread'];
+
+print(`products до вызовов splice: [${products}]`);
+
+// Задание 1
+products.splice(2, 0, 'orange', 'banana');                         // передайте корректные аргументы
+print(`products после вызова splice: [${products}]`);
+assert(compareArrays(products, ['water', 'sugar', 'orange', 'banana', 'milk', 'bread']), "Добавьте в массив products элемент 'orange' и 'banana'");
+
+// Задание 2
+var milkElement = products.splice(2, 1 );        // передайте корректные аргументы
+print(`удаленный элемент: ${milkElement}`);
+print(`products после вызова splice: [${products}]`);
+
+assert(compareArrays(products, ['water', 'sugar', 'orange', 'banana', 'bread']), "Удалите 'milk'");
+
+// Задание 3
+products.splice(3, 0, 'rice', 'apple' );                         // передайте корректные аргументы
+print(`products после вызова splice: [${products}]`);
+assert(compareArrays(products, ['water', 'sugar', 'orange', 'banana', 'rice', 'apple', 'bread']), "Добавьте в массив products элементы 'rice', 'apple'");
+
+
+
+
+
+</script>
+</body>
+</html>

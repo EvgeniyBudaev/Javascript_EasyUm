@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Методы объектов</title>
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+</head>
+<body>
+<script>
+/*
+Задание.
+Для доступа к текущему объекту из метода используется ключевое слово this.
+this гарантирует, что функция работает именно с тем объектом, в контексте которого вызвана.
+
+1. Получите доступ к свойствам firstName и lastName внутри функции sayHi при помощи this.
+*/
+
+var person = {
+    firstName: "Ivan",
+    lastName: "Petrov"
+};
+
+assert(person.sayHi() == "Привет, меня зовут Ivan Petrov!", "Должна вернуться строка 'Привет, меня зовут Ivan Petrov!'");
+
+
+</script>
+</body>
+</html>

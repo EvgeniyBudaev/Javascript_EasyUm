@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Метод filter()</title>
+</head>
+<body>
+<script>
+/*Задание. 
+Метод arr.filter(callback[, thisArg]) используется для фильтрации массива через функцию.
+Он создаёт новый массив, в который войдут только те элементы arr, 
+для которых вызов callback(item, i, arr) возвратит true.
+
+1. Отфильтровать только четные числа при помощи filter
+
+*/
+
+var arr = [2, 3, 5, 7, 4, 8, 11, 10];
+
+print(`Исходный массив: ${arr}`);
+
+function grater5(element) {
+  return element > 5;
+}
+
+function negative(element) {
+  return element < 0;
+}
+
+function filter(array, callbackFunc) {
+  var result = [];
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    if (callbackFunc(element)) {
+      result.push(element);
+    }
+  }
+  return result;
+}
+
+
+print(`Массив после применения map(): ${evenArr}`);
+
+assert(evenArr == [2, 4, 8, 10], 'Массив evenArr должен содержать только четные числа');
+
+</script>
+</body>
+</html>

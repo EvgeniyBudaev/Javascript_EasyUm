@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Методы pop() и push()</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+1. Добавьте 'sugar' и 'water' при помощи метода push() в конец массива
+2. Удалите 3 последних элемента при помощи метода pop()
+*/
+var products = ['milk', 'bread'];
+
+products.push('sugar');                       // добавьте вызов метода push()
+products.push('water');                       // добавьте вызов метода push()
+
+print(`Массив products после добавления элементов 'sugar' и 'water': [${products}]`);
+assert(compareArrays(products, ['milk', 'bread', 'sugar', 'water']), "Добавить 'sugar' и 'water' в products");
+
+var waterElement = products.pop()    ; // добавьте вызов метода pop()
+var sugarElement = products.pop()    ; // добавьте вызов метода pop()
+var breadElement = products.pop()    ; // добавьте вызов метода pop()
+
+print(`Массив products после удаления элементов 'water', 'sugar' и 'milk': [${products}]`);
+
+assert(waterElement == 'water', 'Удалите water при помощи pop()');
+assert(sugarElement == 'sugar', 'Удалите sugar при помощи pop()');
+assert(breadElement == 'bread', 'Удалите bread при помощи pop()');
+
+</script>
+</body>
+</html>

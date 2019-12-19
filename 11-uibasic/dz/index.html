@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Преобразуйте градусы из Цельсия в Фаренгейт</title>
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+</head>
+<body>
+<script>
+/*
+Задание
+Напишите программу для преобразование из градусов Цельсия в градусы по Фаренгейту.
+Возьмите за основу домашнее задание из папки 10-converter/dz.
+
+Запросите у пользователя значение в цельсяих при помощи функции prompt().
+Вычислите значение в фаренгейтах и отобразите результат с помощью alert().
+
+Алгоритм преобразования из Цельсия в Фаренгейт: умножить температуру в Цельсиях на 9/5 и добавить 32.
+*/
+var celsius = prompt("Введите значение в градусах Цельсия: ");
+var celsiusToFahrenheit = (celsius * (9/5)) + 32;
+alert(celsiusToFahrenheit);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Сравнение с Function Declaration</title>
+</head>
+<body>
+<script>
+/*
+Function Declaration – функция, заранее объявленная в основном потоке кода («Классическое» объявление функции)
+Function Expression – объявление функции в контексте какого-либо выражения, например присваивания.
+
+Основное отличие между ними: функции, объявленные как Function Declaration, 
+создаются интерпретатором до выполнения кода.
+
+Задание
+1. Исправьте программу, чтобы результат работы функции mult() сохранился в переменную resultMult
+*/
+
+var resultSum;
+var resultMult;
+
+var resultSum = sum(2, 3);
+print('Результат сложения: ' + resultSum);
+
+// Function Declaration
+function sum(a, b) {
+  return a + b;
+}
+
+// Function Expression
+var mult = function(a, b) {
+  return a * b;
+};
+
+resultMult = mult(2, 3);
+
+print('Результат умножения: ' + resultMult);
+
+assert(resultMult == 6, 'resultMult == 6');
+
+</script>
+</body>
+</html>

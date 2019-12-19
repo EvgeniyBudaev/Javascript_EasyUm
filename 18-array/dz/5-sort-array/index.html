@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../assert/assert.css">
+    <script src="../../../assert/assert.js"></script>
+    <script src="../../../utils/print.js"></script>
+    <title>Скопировать и отсортировать массив</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+Скопировать и отсортировать массив.
+
+Есть массив строк arr. Создайте массив arrSorted – из тех же элементов, но отсортированный.
+Исходный массив не должен меняться.
+*/
+
+
+var arr = ["Python", "HTML", "JavaScript", "CSS", "C"];
+var arrCopy = [];
+
+print(`arr до вызова sort(): [${arr}]`);
+
+// скопируйте массив arr и сохраните в arrCopy (можно при помощи метода slice())
+arrCopy = arr.slice();
+// отсортируйте arrCopy
+arrCopy.sort();
+print(`arrCopy после вызова sort(): [${arrCopy}]`);
+
+assert(compareArrays(arr, ["Python", "HTML", "JavaScript", "CSS", "C"]), 'arr не изменять!');
+assert(compareArrays(arrCopy, ['C', 'CSS', 'HTML', 'JavaScript', 'Python']), 'Надо отсортировать массив')
+
+</script>
+</body>
+</html>

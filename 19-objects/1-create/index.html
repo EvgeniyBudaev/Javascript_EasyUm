@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <title>Создание объектов</title>
+</head>
+<body>
+<script>
+/*
+Объекты в JavaScript сочетают в себе два важных функционала:
+
+1. ассоциативный массив: структура, пригодная для хранения любых данных (словарь или хеш).
+2. языковые возможности для объектно-ориентированного программирования.
+
+Задание.
+1. Создайте новый пустой объект obj1 при помощи фигурных скобок
+2. Создайте новый пустой объект obj2 при помощи вызова функции конструктора: new Object()
+*/
+var __ = undefined;
+
+var obj1 = {};
+var obj2 = new Object();
+
+assert(typeof(obj1) == 'object', 'Создайте объект obj1 при помощи фигурных скобок');
+assert(typeof(obj2) == 'object', 'Создайте объект obj2 при помощи фигурных скобок');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Замена элементов в массиве</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+1. Замените sugar на tea. Напишите правильное значение вместо __
+2. Замените milk на juice. Напишите правильное значение вместо __
+*/
+var __ = undefined;
+
+products = ['milk', 'bread', 'sugar', 'water'];
+print(`products до замены: [${products}]`);
+
+products[ 2 ] = 'tea';
+products[ 0 ] = 'juice';
+
+print(`products после замены: [${products}]`);
+assert(compareArrays(products, ['juice', 'bread', 'tea', 'water']));
+</script>
+</body>
+</html>

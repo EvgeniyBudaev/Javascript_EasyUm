@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Копирование объекта</title>
+</head>
+<body>
+<script>
+/*
+Задание
+1. Присвойте переменной player2 значение, которе хранится в переменной player1
+2. Измените имя у player2 на 'Mob'
+3. Убедитесь, что player1 и player2 ссылаются на один и тот же объект
+*/
+var player1 = {
+    name: 'Bob',
+    energy: 100, 
+    lives: 2,
+    position: {
+        x: 19,
+        y: 100
+    },
+    color: 'blue'
+};
+
+print("Имя до изменения");
+print(player1.name);
+
+// измените код под комментарием
+var player2 = player1;
+player2.name = 'Mob';
+
+print("player1 и player2 после изменения name");
+print(player1.name);
+print(player2 && player2.name);
+
+assert(player1.name == 'Mob', 'Переменые player1 и player2 ссылаются на одно и то же свойство name');
+assert(player2 && player2.name && player2.name == 'Mob', 'Переменые player1 и player2 ссылаются на одно и то же свойство name');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Методы pop() и push()</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+1. Добавьте 'sugar' и 'water' при помощи метода unshift() в начало массива
+2. Удалите 3 первых элемента при помощи метода shift()
+*/
+
+var products = ['milk', 'bread'];
+
+products.unshift('sugar')    ;                       // добавьте вызов метода unshift()
+products.unshift('water')    ;                       // добавьте вызов метода unshift()
+
+print(`Массив products после добавления элементов 'sugar' и 'water': [${products}]`);
+assert(compareArrays(products, ['water', 'sugar', 'milk', 'bread']), "Добавить 'water' и 'sugar' в products");
+
+var waterElement = products.shift()    ; // добавьте вызов метода shift()
+var sugarElement = products.shift()    ; // добавьте вызов метода shift()
+var milkElement  = products.shift()    ; // добавьте вызов метода shift()
+
+print(`Массив products после удаления элементов 'water', 'sugar' и 'bread': [${products}]`);
+
+assert(waterElement == 'water', 'Удалите water при помощи shift()');
+assert(sugarElement == 'sugar', 'Удалите sugar при помощи shift()');
+assert(milkElement == 'milk', 'Удалите bread при помощи shift()');
+
+</script>
+</body>
+</html>

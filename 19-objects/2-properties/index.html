@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Свойства объекта</title>
+</head>
+<body>
+<script>
+/*
+Объект может содержать в себе любые значения, которые называются свойствами объекта 
+(по сути переменные связанные только конкретным объектом). 
+Доступ к свойствам осуществляется по имени свойства (иногда говорят «по ключу»).
+
+Задание.
+1. Создайте объект person
+2. Присвойте свойству name значение "Вован"
+3. Присвойте свойству age значение 29
+4.1 Проверить что свойство name есть в объекте person при помощи оператора in
+4.2 Проверить, что свойство test отсутствует в объекте person при помощи оператора in
+5. Выведите значения свойств name и age объекта person
+*/
+
+var __ = {};
+
+var person = {
+    name: "Вован",
+    age:29
+};
+
+
+var isNameProp = "name" in person;
+var isTestProp = !("test" in person);
+
+print();             // отобразите значения свойств объекта person
+
+assert(person.name && person.name == 'Вован', 'Свойство name должно содержать имя "Вован"');
+assert(person.age && person.age == 29, 'Свойство age должно содержать возраст равный 29');
+assert(isNameProp, 'Проверить, что свойство name есть в объекте person при помощи оператора in');
+assert(isTestProp, 'Проверить, что свойство test отсутствует в объекте person при помощи оператора in')
+
+</script>
+</body>
+</html>

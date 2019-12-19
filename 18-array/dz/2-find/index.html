@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../assert/assert.css">
+    <script src="../../../assert/assert.js"></script>
+    <title>Поиск в массиве</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+1. Создайте функцию find(arr, value), которая ищет в массиве arr значение value и возвращает его номер, 
+если найдено, или -1, если не найдено.
+
+Заметка: задание надо решить БЕЗ использования функции indexOf().
+*/
+
+function find(arr, item) {
+    for (var index in arr) {
+       if (arr[index] === item) {
+           return index;
+       }
+    }
+    return -1;
+}
+
+var arr = ['test', 2, 1.5, false];
+
+assert(find(arr, 'test') == 0, "find(arr, 'test') должно вернуть 0"); 
+assert(find(arr, 2) == 1, "find(arr, 2) должно вернуть 1");      
+assert(find(arr, 1.5) == 2, "find(arr, 1.5) должно вернуть 2");
+
+assert(find(arr, 0) == -1,  "find(arr, 0) должно вернуть -1"); 
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Метод forEach</title>
+</head>
+<body>
+<script>
+/*
+Для обработки данных в массиве существуют еще дополнительные методы, 
+которые обходят массив и применяют функцию для элемента. 
+
+Метод arr.forEach(callback[, thisArg]) используется для перебора массива.
+
+Он для каждого элемента массива вызывает функцию callback.
+Этой функции он передаёт три параметра callback(item, i, arr):
+
+item – очередной элемент массива.
+i – его номер.
+arr – массив, который перебирается.
+
+1. Воспользуйтесь функцией forEach для объединения всех слов в одну строку.
+*/
+
+var arr = ['apple', 'orange', 'plum'];
+var result = '';
+
+function concatElements(element) {
+  //console.log(element)
+  result = result + element;
+}
+
+function forEach(array, callbackFunc) {
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    callbackFunc(element);
+  }
+}
+
+forEach(arr, concatElements);
+
+
+assert(result == 'appleorangeplum', 'result должна содержать строку "appleorangeplum"')
+
+</script>
+</body>
+</html>

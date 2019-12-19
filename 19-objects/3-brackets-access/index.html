@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Доступ к свойствам при помощи квадратных скобок</title>
+</head>
+<body>
+<script>
+/*
+Задание
+1. Добавьте свойство age в person равный 29 при помощи квадратных скобок
+2. Добавьте свойство gender в person равный 'male' при помощи квадратных скобок
+3. Добавьте свойство person['birth year'] равное 1989
+4. 
+*/
+
+var person = {};
+
+person['name'] = 'Вован'; // то же что и person.name = 'Вован'
+person['age'] = 29;
+person['gender'] = 'male';
+person['birth year'] = 1989;
+
+
+assert(person.name == 'Вован', 'Свойство name должно содержать имя "Вован"');
+assert(person.age && person.age == 29, 'Свойство age должно содержать возраст равный 29');
+assert(person.gender && person.gender == "male", 'Свойство gender должно содержать значение "male"');
+assert(person['birth year'] && person['birth year'] == 1989, 'Добавьте свойство person[\'birth year\'] равное 1989');
+
+
+</script>
+</body>
+</html>

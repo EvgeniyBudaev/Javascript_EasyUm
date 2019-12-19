@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <title>Поиск элемента</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+Метод indexOf() возвращает первый индекс, по которому данный элемент может быть найден в массиве 
+или -1, если такого индекса нет.
+Синтаксис: arr.indexOf(searchElement[, fromIndex = 0]),
+где searchElement - Искомый элемент в массиве. fromIndex - Индекс, с которого начинать поиск.
+
+Метод lastIndexOf() аналогичен indexOf(), но поиск ведется с конца массива
+
+1. Замените __ на правильный ответ.
+*/
+var __ = undefined;
+
+var array = [2, 5, 'a', 9, 'z', 2];
+
+assert(array.indexOf(2) == 0, 'Чему равен реузультат вызова array.indexOf(2) ?'); 
+assert(array.indexOf(7) == -1, 'Чему равен реузультат вызова array.indexOf(7) ?'); 
+assert(array.indexOf('a') == 2, 'Чему равен реузультат вызова array.indexOf(\'a\') ?'); 
+assert(array.indexOf(9, 2) == 3, 'Чему равен реузультат вызова array.indexOf(9, 2) ?'); 
+assert(array.indexOf(2, -1) == 5, 'Чему равен реузультат вызова array.indexOf(2, -1) ?'); 
+assert(array.lastIndexOf(2) == 5, 'Чему равен реузультат вызова array.lastIndexOf(2) ?'); 
+
+</script>
+</body>
+</html>

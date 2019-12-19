@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Удаление элемента из массива</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+Так как массивы являются объектами, то для удаления ключа можно воспользоваться оператором delete
+
+1. Используйте оператор delete для удаления 2-го элемента массива.
+
+*/
+
+var arr = ["I", "go", "home"];
+
+delete  arr[1]; // примените оператор delete для удаления
+
+print(`После удаления 2-го элемента [${arr}]`);
+
+assert(arr[1] == undefined, '2-ой элемент должен стать undefined после удаления');
+
+
+
+</script>
+</body>
+</html>

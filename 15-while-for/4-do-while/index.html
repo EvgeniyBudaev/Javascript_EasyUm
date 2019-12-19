@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Do while</title>
+</head>
+<body>
+<script>
+/*
+Задание
+Проверку условия можно поставить под телом цикла, используя специальный синтаксис do..while
+
+var i = 0;
+do {
+    alert( i );
+    i++;
+} while (i < 3);
+
+Цикл, описанный, таким образом, сначала выполняет тело, а затем проверяет условие.
+Синтаксис do..while очень редко используется!
+
+1. Посмотрите на разницу работы цикла while и do-while
+*/
+
+var i = 0;
+var choice = '';
+
+choice = prompt('Продолжить цикл (y/n)?', '');
+
+while (choice == 'y') {
+    console.log('Переменная i равна: ' + i);
+    choice = prompt('Продолжить цикл (y/n)?', '');
+    ++i;
+}
+
+console.log('-----');
+
+var j = 0;
+var choice = '';
+
+do {
+    console.log('Переменная j равна: ' + j);
+    choice = prompt('Продолжить цикл (y/n)?', '');
+    ++j;
+} while (choice == 'y');
+
+/*
+Немного юмора для тех кто знает песню Rammstein - du hast :-)
+do
+do while
+do while break
+
+do
+do while
+do while break
+
+do
+do while
+do while break
+
+do
+do while
+do while break
+
+do while break return
+do while break return
+do while break return
+for if switch case default
+
+const do try false extern sizeof
+throw int static enum double
+
+char
+char
+
+*/
+</script>
+</body>
+</html>

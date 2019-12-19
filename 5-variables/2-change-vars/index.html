@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Создаем переменную</title>
+  <meta charset="utf-8">
+  <script src="../../assert/assert.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../assert/assert.css">
+</head>
+<body>
+<script>
+/*
+    Задание
+    1. Измените значение переменной firstname под комментарием на 'Ivan'
+    2. Скопируйте значение из переменной lastName в переменную myLastName при помощи оператора присваивания.
+*/
+
+var firstName;
+firstName = 'Petya';
+// измените значение переменной firstname под комментарием
+firstName = 'Ivan';
+
+var lastName = 'Petrov';
+
+var myLastName = lastName;
+
+console.log("firstName: " + firstName);
+console.log("lastName: " + lastName);
+// Проверочный код под комментарием не трогаем!
+assert(typeof(firstName) !== 'undefined', 'Объявите переменную firstName при помощи ключевого слова var')
+assert(typeof(myLastName) !== 'undefined', 'Объявите переменную myLastName при помощи ключевого слова var')
+
+if (typeof(firstName) !== 'undefined') {
+    assert(firstName == 'Ivan', 'Присвойте значение значение \'Ivan\'');
+}
+
+if (typeof(myLastName) !== 'undefined') {
+    assert(lastName == myLastName, 'Скопируйте значение из переменной lastName в myLastName');
+}
+
+</script>
+</body>
+</html>

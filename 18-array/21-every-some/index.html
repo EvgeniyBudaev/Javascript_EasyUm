@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <title>Методы every и some</title>
+</head>
+<body>
+<script>
+/*
+Эти методы используются для проверки массива.
+Метод «arr.every(callback[, thisArg])» возвращает true, если вызов callback вернёт true для каждого элемента arr.
+Метод «arr.some(callback[, thisArg])» возвращает true, если вызов callback вернёт true для какого-нибудь элемента arr.
+
+1. Замените __ на правильный ответ
+*/
+var __ = undefined;
+var arr = [1, -1, 2, -2, 3];
+
+function isPositive(number) {
+  return number > 0;
+}
+
+assert( arr.every(isPositive) === __,  'Какой будет результат arr.every(isPositive) ?');
+assert( arr.some(isPositive) === __, 'Какой будет результат arr.some(isPositive) ?'); 
+
+</script>
+</body>
+</html>

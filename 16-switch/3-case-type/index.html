@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>В case Тип имеет значение</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+1. Что произойдет, если ввести число 0, 1, 2 или 3 ?
+2. Исправьте программу, чтобы она корректно обрабатывала ввод
+*/
+
+var arg = prompt("Введите arg?");
+switch (arg) {
+  case '0':
+  case '1':
+    alert( 'Один или ноль' );
+
+  case '2':
+    alert( 'Два' );
+    break;
+
+  case 3:
+    alert( 'Никогда не выполнится' );
+
+  default:
+    alert('Неизвестное значение: ' + arg)
+}
+</script>
+</body>
+</html>

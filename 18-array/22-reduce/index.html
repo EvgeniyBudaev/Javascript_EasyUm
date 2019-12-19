@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Метод reduce()</title>
+</head>
+<body>
+<script>
+/*
+Метод arr.reduce(callback[, initialValue]) используется для последовательной обработки 
+каждого элемента массива с сохранением промежуточного результата.
+
+Метод reduce используется для вычисления на основе массива какого-либо единого значения,
+иначе говорят «для свёртки массива». 
+
+Он применяет функцию callback по очереди к каждому элементу массива слева направо, сохраняя при этом промежуточный результат.
+
+Аргументы функции callback(previousValue, currentItem, index, arr):
+    previousValue – последний результат вызова функции, он же «промежуточный результат».
+    currentItem – текущий элемент массива, элементы перебираются по очереди слева-направо.
+    index – номер текущего элемента.
+    arr – обрабатываемый массив.
+
+Кроме callback, методу можно передать «начальное значение» – аргумент initialValue. 
+Если он есть, то на первом вызове значение previousValue будет равно initialValue, 
+а если у reduce нет второго аргумента, то оно равно первому элементу массива, а перебор начинается со второго.
+
+1. Допишите код для нахождения суммы всех элементов при помощи reduce
+
+*/
+
+var arr = [1, 2, 3, 4, 5];
+
+// для каждого элемента массива запустить функцию,
+// промежуточный результат передавать первым аргументом далее
+// в начале sum == 0
+var result = arr.reduce(function(sum, current) {
+    print( `предыдущее: ${sum}, текущее: ${current}` );
+  return ;      // допишите код для нахождения суммы всех элементов
+}, 0);
+
+assert(result == 15, 'Результат суммирования должен быть равен 15')
+
+</script>
+</body>
+</html>

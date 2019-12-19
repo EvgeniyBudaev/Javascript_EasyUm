@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Имена чувствительные к регистру</title>
+  <meta charset="utf-8">
+  <script src="../../assert/assert.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../assert/assert.css">
+</head>
+<body>
+<script>
+/*
+    Задание
+    В JavaScript все переменные и имена функций чувствительны к регистру. 
+    Это значит, что одинаковые названия функций или переменных с заглавными буквами отличаются от названий с прописными.
+    1. Исправьте название переменной MYBirthYEaR
+    2. Запустите и убедитесь, что все тесты проходят.
+*/
+
+var myBirthYear;
+myBirthYear = 1990;
+
+// Проверочный код под комментарием не трогаем!
+assert(typeof(myBirthYear) !== "undefined", 'Объявите переменную myBirthYear')
+
+if (typeof(myBirthYear) !== "undefined") {
+    assert(myBirthYear == 1990, 'Присвойте значение значение 1990');
+    console.log("myBirthYear: " + myBirthYear)
+}
+
+
+</script>
+</body>
+</html>
+

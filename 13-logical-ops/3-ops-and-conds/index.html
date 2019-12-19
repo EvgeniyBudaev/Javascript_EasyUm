@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../assert/assert.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../assert/assert.css">
+    <title>Операторы и условия</title>
+</head>
+<body>
+<script>
+/*
+    Задание
+    1. Напишите условие if для проверки того факта, что age НЕ находится между 18 и 60 включительно.
+       Сделайте два варианта условия: первый с использованием оператора НЕ !, второй – без этого оператора.
+
+    Псевдокод:
+    ЕСЛИ age НЕ находится между 18 и 60 включительно, то
+        alert('Вам пора на пенсию или вы еще ребенок!');
+    ИНАЧЕ
+        alert('Вы можете работать в поте лица!');
+*/
+
+var age = parseInt(prompt('Введите Ваш возраст: ', ''));
+
+// допишите программу
+if(age <=18 || age >=65){
+    alert('Вам пора на пенсию или вы еще ребенок!');
+} else {
+    alert('Вы можете работать в поте лица!');
+}
+
+</script>
+</body>
+</html>

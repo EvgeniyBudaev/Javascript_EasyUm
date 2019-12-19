@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../utils/print.js"></script>
+    <title>Пример с использованием функционального выражения</title>
+</head>
+<body>
+<script>
+/*
+Функция setInterval() принимает на вход функцию, которая будет вызываться каждый раз
+по таймеру равному 2 сек
+
+Задание
+1. Перепишите объявление функции sayHello с декларативного на функциональное выражение.
+   В момент вызова setInterval() сразу определите функциональное выражение.
+*/
+
+
+function sayHello() {
+    print("Hi world");
+}
+
+setInterval(sayHello, 2000);
+
+</script>
+</body>
+</html>

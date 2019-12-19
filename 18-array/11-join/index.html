@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Метод join()</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+Метод join() объединяет все элементы массива в строку.
+Синтаксис: arr.join([separator])
+  separator (Необязательный) Определяет строку, разделяющую элементы массива
+
+1. Вызовите join() у массива arr и передайте необходимую строку-разделитель
+*/
+
+var arr = ['Марина', 'Егнат', 'Вася', 'Коля'];
+
+var str = arr.join(', ')  ;   // допишите вызов метода join и передайте разделитель
+
+print('Строка после join(): ' + str);
+
+assert(str == 'Марина, Егнат, Вася, Коля', "Строка содержит: Марина, Егнат, Вася, Коля")
+</script>
+</body>
+</html>

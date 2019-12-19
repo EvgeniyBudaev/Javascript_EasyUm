@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Метки</title>
+</head>
+<body>
+<script>
+/*
+Для выхода одновременно из нескольких уровней цикла можно использовать метку у break или continue
+
+Не стоит пользоваться метками в повседневных задачах!
+*/
+outer: for (var i = 0; i < 3; i++) {
+    for (var j = 0; j < 3; j++) {
+        var input = prompt('Значение в координатах '+i+','+j, '');
+
+        // если отмена ввода или пустая строка -
+        // завершить оба цикла
+        if (!input) break outer; // (*)
+    }
+}
+alert('Готово!');
+</script>
+</body>
+</html>

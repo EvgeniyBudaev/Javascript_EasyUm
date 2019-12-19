@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Switch/Case</title>
+</head>
+<body>
+<script>
+/*
+Конструкция switch заменяет собой сразу несколько if.
+
+Задание
+1. Запустите пример и посмотрите на работу.
+2. Добавьте еще один case, когда вводится число 3, то задать направление "Назад"
+
+*/
+var keyCode = parseInt(prompt("Введите код от 0 до 3"));
+
+switch (keyCode) {
+  case 0:
+    alert( 'Налево' );
+    break;
+  case 1:
+    alert( 'Прямо!' );
+    break;
+  case 2:
+    alert( 'Направо' );
+    break;
+  default:
+    alert( 'Я таких значений не знаю' );
+}
+
+
+</script>
+</body>
+</html>

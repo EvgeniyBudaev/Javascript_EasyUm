@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Логические операторы</title>
+    <script src="../../assert/assert.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../assert/assert.css">
+</head>
+<body>
+<script>
+/*
+    Задание.
+    Замените __ на ответ.
+*/
+var __ = undefined; // переменная заполнитель.
+
+assert( (true  || true)   == true, 'Чему равно true || true ?');
+assert( (false || true)   == true, 'Чему равно false || true ?');
+assert( (true  || false)  == true, 'Чему равно true || false ?');
+assert( (false || false)  == false, 'Чему равно false || false ?');
+
+// Короткий цикл вычислений
+// оператор ИЛИ вычисляет ровно столько значений, сколько необходимо – до первого true
+// и возвращает то значение, на котором остановились вычисления.
+assert( (1  || 0)         == true, 'Чему равно 1 || 0 ?');
+assert( ('' || 'c')       == "c", 'Чему равно \'\' || c ?');
+assert( (undefined || 0)  == false, 'Чему равно undefined || 0 ?');
+
+assert( (null || 2 || undefined) == 2, 'Чему будет равен null || 2 || undefined ?');
+assert( (-1 || 0) == -1, 'Чему равно (-1 || 0) ?' );
+assert( (-1 && 0) == false, 'Чему равно (-1 && 0) ? ');
+assert( (null || -1 && 1) == 1, 'Чему равно null || -1 && 1 ?');
+
+var x;
+true || (x = 1);
+assert(x == __, 'Чему равен x?');
+
+false || (x = 1);
+assert(x == 1, 'Чему равен x?');
+
+
+var undef; // переменная не присвоена, т.е. равна undefined
+var zero = 0;
+var emptyString = "";
+var msg = "Hello!";
+
+var result = undef || zero || emptyString || msg || 0;
+assert(result == msg , 'Чему равно result?');
+
+
+assert( (true  && true)   == true, 'Чему равно true && true ?');
+assert( (false && true)   == false, 'Чему равно false && true ?');
+assert( (true  && false)  == false, 'Чему равно true && false ?');
+assert( (false && false)  == false, 'Чему равно false && false ?');
+
+// Короткий цикл вычислений
+// Если левый аргумент – false, оператор И возвращает его и заканчивает вычисления. 
+// Иначе – вычисляет и возвращает правый аргумент.
+assert( (1 && 2)        == 2, 'Чему равно 1 && 2 ?');
+assert( ('a' && 'b')    == 'b', 'Чему равно a && b ?');
+assert( (1 && 'b')      == 'b', 'Чему равно 1 && b ?');
+assert( (null && 5)     == null, 'Чему равно null && 5 ?');
+assert( (0 && "something")      == 0, 'Чему равно 0 && something ?' );
+assert( (1 && 2 && null && 3)   == __, 'Чему равно 1 && 2 && null && 3?' );
+assert( (1 && 2 && 3) == 3, 'Чему равно 1 && 2 && 3 ?' );
+
+assert( (1 && null && 2) == null, 'Чему будет равен результат 1 && null && 2 ?' );
+
+// Приоритет у && больше, чем у ||
+assert( 6 || 1 && 0 == __, 'Чему равно 6 || 1 && 0 ?' );
+
+// Оператор отрицания ! сначала приводит аргумент к логическому типу true/false,
+// а затем возвращает противоположное значение.
+assert( !true  == false, 'Чему равно !true ?');
+assert( !false == true, 'Чему равно !false ?');
+assert( !0     == true, 'Чему равно !0 ?');
+assert( !''     == true, 'Чему равно !\'\' ?');
+assert( !1     == false, 'Чему равно !1 ?');
+assert( !(true || false)     == false, 'Чему равно !(true || false) ?');
+assert( !!0     == false, 'Чему равно !!0 ?');
+assert( !!1     == true, 'Чему равно !!1 ?');
+assert( !!null     == false, 'Чему равно !!null ?');
+assert( !!'text'     == true, 'Чему равно !!\'text\' ?');
+
+
+</script>
+</body>
+</html>

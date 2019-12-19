@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Массив с "дырами"</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+1. Добавьте элемент равный 50 по индексу 5
+2. Посмотрите, что в результате содержит массив и как изменилась его длина
+*/
+var a = [];
+a[0] = 10;
+a[5] = 50;
+
+print(`Массив a после добавления элемента по индексу 5: ${a}`);
+
+assert(a.length == 6, 'Длина массива должна быть равна 6');
+assert(a[5] == 50,  'Добавьте элемент равный 50 по индексу 5')
+
+</script>
+</body>
+</html>

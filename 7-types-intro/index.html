@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Введение в типы</title>
+  <meta charset="utf-8">
+  <script src="../assert/assert.js"></script>
+  <link rel="stylesheet" type="text/css" href="../assert/assert.css">
+</head>
+<body>
+<script>
+/*
+    Задание
+     Тип данных определяет множество значений, набор операций, 
+     которые можно применять к таким значениям и, возможно, способ реализации хранения значений и выполнения операций.
+     
+    1. Замените __ на значение типа перменной
+
+    Примечание:
+    Результат typeof null == "object" – это официально признанная ошибка в языке, которая сохраняется для совместимости.
+    На самом деле null – это не объект, а отдельный тип данных.
+*/
+var __ = undefined; // значение заполнитель
+
+var name = 'Ivan';
+var age = 30;
+var price = 100.52;
+var isSingle = true;
+var title = undefined;
+var car = null;
+var country = { name: 'Россия', citizensCount: 1400000000 };
+
+// замените __ на соответствующее значение
+nameType =  (typeof(name)     == 'string' );
+ageType  =  (typeof(age)      == 'number' ) ;
+priceType = (typeof(price)    == 'number' ) ;
+isSingle =  (typeof(isSingle) == 'boolean' ) ;
+title =     (typeof(title)    == 'undefined') ;
+car =       (typeof(car)      == 'object') ;
+country =  (typeof(country)   == 'object') ;
+
+
+assert(nameType,  'Замените __ на значение типа');
+assert(ageType,   'Замените __ на значение типа');
+assert(priceType, 'Замените __ на значение типа');
+assert(isSingle,  'Замените __ на значение типа');
+assert(title,     'Замените __ на значение типа');
+assert(car,       'Замените __ на значение типа');
+assert(country,   'Замените __ на значение типа');
+
+</script>
+</body>
+</html>
+

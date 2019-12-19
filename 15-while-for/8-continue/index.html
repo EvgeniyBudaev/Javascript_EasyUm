@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Continue</title>
+</head>
+<body>
+<script>
+/*
+Оператор continue прекращает выполнение текущей итерации цикла.
+То есть прерывает не весь цикл, а только текущее выполнение тела, как будто оно закончилось.
+
+1. Исправьте программу, чтобы вместо нечетных отобразилиьс четные числа в консоли.
+2. Подумайте как можно обойтись без continue использовав только условие if?
+   Напишите альтернативный вариант без continue.
+   Как вы думаете, в чем плюс использования continue вместо if ?
+*/
+
+for (var i = 0; i < 10; i++) {
+    if (i % 2 == 0) continue;
+    console.log(i);
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Break</title>
+</head>
+<body>
+<script>
+/*
+Задание
+1. Запустите программу и посмотрите, сколько раз программа выведет строку "Спасибо, что запустили меня!:)"
+2. Уберите оператор break и запустите программу, сколько раз теперь сработал цикл while?
+*/
+var number = 1;
+
+console.log("Привет! Запускаю цикл while.");
+
+while (number < 5) {
+    console.log("Спасибо, что запустили меня!", number);
+    number = number + 1;
+
+    console.log("Прерываем цикл");
+    break;
+}
+
+
+console.log("\nЦикл while закончил свою работу. Прощайте!;)")
+</script>
+</body>
+</html>

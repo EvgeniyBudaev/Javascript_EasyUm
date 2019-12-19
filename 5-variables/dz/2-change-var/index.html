@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Создаем переменную</title>
+  <meta charset="utf-8">
+  <script src="../../../assert/assert.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../assert/assert.css">
+</head>
+<body>
+<script>
+/*
+    Задание
+    1. Измените значение переменной catName под комментарием на 'Barsik'
+    2. Скопируйте значение из переменной catName в переменную kittenName при помощи оператора присваивания.
+    3. Измениет значение возраста (переменная age) с 4 на 5
+*/
+
+var catName;
+catName = 'Petya';
+// измените значение переменной catName под комментарием
+catName = 'Barsik';
+
+var kittenName = catName;
+
+var age = 4;
+age = 5;
+
+
+console.log("catName: " + catName);
+console.log("age: " + age);
+
+
+
+// Проверочный код под комментарием не трогаем!
+assert(typeof(catName) !== 'undefined', 'Объявите переменную catName при помощи ключевого слова var')
+assert(typeof(kittenName) !== 'undefined', 'Объявите переменную kittenName при помощи ключевого слова var')
+
+if (typeof(catName) !== 'undefined') {
+    assert(catName == 'Barsik', 'Присвойте значение \'Barsik\'');
+}
+
+if (typeof(kittenName) !== 'undefined') {
+    assert(catName == kittenName, 'Скопируйте значение из переменной catName в kittenName');
+}
+
+assert(age == 5, 'Измените возраст на 5')
+
+</script>
+</body>
+</html>

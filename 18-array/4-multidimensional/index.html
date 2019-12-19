@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Многомерные массивы</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+1. Добавьте подмассивы ['Play Game', 2], ['Sleep', 7] в массив activities
+2. Замените __ на правильное значение
+*/
+var __ = undefined;
+
+var activities = [
+    ['Work', 9],
+    ['Eat', 2],
+    ['Commute', 2],
+    ['Play Game', 2],
+    ['Sleep', 7]
+];
+
+//printArray(activities);
+
+assert(activities[0] == 'Work,9', 'Какое значение имеет activities[0]?');
+assert(activities[2] == 'Commute,2', 'Какое значение имеет activities[2]?');
+
+assert(activities[1][0] == 'Eat', 'Какое значение имеет activities[1][0]?');
+assert(activities[3][1] == 2, 'Какое значение имеет activities[3][1]?');
+
+assert(compareArrays(activities, [['Work', 9],['Eat', 2],['Commute', 2],['Play Game', 2], ['Sleep', 7]]), "Добавьте подмассивы ['Play Game', 2], ['Sleep', 7] в массив activities");
+
+
+
+
+</script>
+</body>
+</html>

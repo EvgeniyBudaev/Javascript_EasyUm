@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../assert/assert.css">
+    <script src="../../../assert/assert.js"></script>
+    <title>Отфильтровать анаграммы</title>
+</head>
+<body>
+<script>
+/*
+Анаграммы – слова, состоящие из одинакового количества одинаковых букв, но в разном порядке. Например:
+воз - зов
+киборг - гробик
+корсет - костер - сектор
+
+Напишите функцию aclean(arr), которая возвращает массив слов, очищенный от анаграмм.
+Например, анаграмма 'воз' - это 'зов', следовательно 'зов' надо удалить.
+*/
+
+var arr = ["воз", "киборг", "корсет", "зов", "гробик", "костер", "сектор"];
+
+function aclean(arr) {
+    let obj = {};
+
+    for (let i = 0; i < arr.length; i++) {
+        let sorted = arr[i].toLowerCase().split("").sort().join("");
+        obj[sorted] = arr[i];
+    }
+
+    return Object.values(obj);
+}
+
+// function aclean(arr) {
+//     let map = new Map();
+//
+//     for (let word of arr) {
+//         // разбиваем слово на буквы, сортируем и объединяем снова в строку
+//         let sorted = word.toLowerCase().split("").sort().join(""); // (*)
+//         map.set(sorted, word);
+//     }
+//
+//     return Array.from(map.values());
+// }
+
+assert(compareArrays(aclean(arr), ['воз', 'киборг', 'корсет']));
+</script>
+</body>
+</html>

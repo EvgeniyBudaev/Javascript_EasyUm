@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../assert/assert.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assert/assert.css">
+    <title>Преобразование типов</title>
+</head>
+<body>
+<script>
+/*
+В JavaScript есть три преобразования:
+- Строковое преобразование, когда требуется представление чего-либо в виде строки.
+  'test' + 123 = 'test123'
+- Численное преобразование, происходит в математических функциях и выражениях, 
+  а также при сравнении данных различных типов (кроме сравнений ===, !==)
+  2 + 2.5 = 4.5
+
+- Преобразование к логическому значению true/false происходит в логическом контексте, 
+  таком как if(value), и при применении логических операторов.
+  !0 = true, if ('') === if (false)
+*/
+var __ = undefined;
+
+assert( (true + "test") == 'truetest', 'Чему равно true + "test" ?');
+assert( (100500 + "test") == '100500test', 'Чему равно 100500 + "test" ?');
+// преобразование явным способом
+assert( (String(null) === "null") == true, 'Чему равно String(null) === "null" ?');
+
+assert(( +'234' ) == 234, 'Чему равно +\'2\'');
+assert( Number('234') == 234, 'Чему равно Number(234)');
+// Пробельные символы по краям обрезаются.
+assert( Number('  234  \n') == 234, 'Чему равно Number(234)');
+assert( isNaN(Number(undefined)), 'Чему равно Number(undefined)');
+assert( Number(null) == 0, 'Чему равно Number(null)');
+assert(( +true ) == 1, 'Чему равно Number(true)');
+assert(( +false ) == 0, 'Чему равно Number(false)');
+assert(("\n0 " == 0) == true, 'Чему равно "\n0 " == 0 ?' );
+assert(("1" == true) == true, 'Чему равно "1" == true ?' );
+
+/*
+Для более очевидной работы кода и во избежание ошибок 
+лучше не давать специальным значениям null/undefined участвовать в сравнениях > >= < <=.
+Используйте в таких случаях переменные-числа или приводите к числу явно.
+
+Специальные значения преобразуются к числу:
+- undefined -> NaN
+- null      -> 0
+
+*/
+
+// null не подчиняется законам математики – он «больше либо равен нулю»: null>=0
+assert((null >= 0) == true,  'null >= 0 ?'); 
+assert((null > 0)  == false,  'null > 0 ?');              
+assert((null == 0) == false, 'null == 0 ?');             
+
+assert((undefined > 0) == false, 'undefined > 0 ?' ); // undefined -> NaN
+assert((undefined == 0) == false, 'undefined == 0 ?' ); // это undefined (без преобразования)
+assert((undefined < 0) == false, 'undefined < 0 ?' ); // undefined -> NaN
+
+/*
+Логическое преобразование
+
+Все значения, которые интуитивно «пусты», становятся false. 
+Их несколько: 0, пустая строка, null, undefined и NaN.
+
+Остальное, в том числе и любые объекты – true.
+*/
+
+assert( Boolean('hello') == true, 'Boolean(\'hello\') ?');
+assert( Boolean(0) == false, 'Boolean(0) ?');
+assert( Boolean(1) == true, 'Boolean(1) ?');
+assert( Boolean(NaN) == false, 'Boolean(NaN) ?');
+assert( Boolean(null) == false, 'Boolean(null) ?');
+
+// любые непустые строки с нулями и даже с пробами - true!
+assert(( !!"0" ) == true, '!!"0" ?' );
+assert(( !!" " ) == true, '!!" " ?' ); 
+
+
+</script>
+</body>
+</html>

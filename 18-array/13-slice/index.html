@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <title>Метод slice()</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+Метод slice([begin[, [end]) копирует участок массива от begin до end, не включая end. 
+Исходный массив при этом не меняется. begin и end не обязательные аргументы.
+
+1. Замените __ на соответствующие значения и исправьте все ошибки
+*/
+var __ = undefined;
+//             -4      -3          -2       -1
+var words = ['peanut', 'butter', 'and', 'jelly'];
+
+assert(words.slice(0, 1) == 'peanut', 'Чему будет равно: words.slice(0, 1) ?');
+assert(words.slice(0, 2) == 'peanut,butter', 'Чему будет равно: words.slice(0, 2) ?');
+assert(words.slice(2)    == 'and,jelly', 'Чему будет равно: words.slice(2) ?');
+assert(words.slice(-1)   == 'jelly', 'Чему будет равно: words.slice(-1) ?');
+assert(words.slice(-2)   == 'and,jelly', 'Чему будет равно: words.slice(-2) ?');
+assert(words.slice(-4, -2) == 'peanut,butter', 'Чему будет равно: words.slice(-4, -2) ?');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
+</head>
+<body>
+
+<button id="buttonHello">Скажи привет!</button>
+<input id="inputName" />
+<script>
+
+function getNameFromInput() {
+        return document.getElementById('inputName').value;
+}
+
+function wrapper() {
+    var name = getNameFromInput();
+    function sayHello() {
+        alert('Hello ' + name);
+    }
+    sayHello();
+}
+
+
+var button = document.getElementById('buttonHello');
+button.addEventListener('click', wrapper)
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../assert/assert.css">
+    <script src="../../../assert/assert.js"></script>
+    <title>Подсчет очков игрока</title>
+</head>
+<body>
+<script>
+/*
+Задание
+Есть объект player с количеством очков за каждый раунд. 
+Напишите код функции, которая получает объект и умножает все свойства с очками на 2.
+Для проверки на число используйте функцию isNumeric()
+*/
+
+function multiplyScores(player) {
+    // напишите код функции
+    for(let key in player){
+        if(typeof (player[key]) === 'number'){
+            player[key] *= 2;
+        }
+    }
+}
+
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n)
+}
+
+var player = {
+    "level1": 200,
+    "level2": 400,
+    "level3": 500,
+    "level4": 100,
+    "name": "Ivan",
+    "surname": "Petrov"
+};
+
+
+multiplyScores(player);
+
+assert(player.level1 == 400 && 
+       player.level2 == 800 && 
+       player.level3 == 1000 && 
+       player.level4 == 200, "Умножьте значения всех числовых свойств на 2");
+
+
+</script>
+</body>
+</html>

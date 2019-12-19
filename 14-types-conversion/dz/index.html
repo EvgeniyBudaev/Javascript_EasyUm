@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../assert/assert.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../assert/assert.css">
+    <title>Преобразование типов</title>
+</head>
+<body>
+<script>
+/*
+  Задание
+  Подумайте, какой результат будет у выражений ниже.
+*/
+var __ = undefined;
+
+assert(("" + 1 + 0) == 10, 'Чему будет равно ( "" + 1 + 0 )?');
+assert(("" - 1 + 0) == -1, 'Чему будет равно ( "" - 1 + 0 )?');
+assert((true + false) == true, 'Чему будет равно ( true + false )?');
+assert((6 / "3") == 2, 'Чему будет равно ( 6 / "3" )?');
+assert(("2" * "3") == 6, 'Чему будет равно ( "2" * "3" )?');
+assert((4 + 5 + "px") == "9px", 'Чему будет равно ( 4 + 5 + "px" )?');
+assert(("$" + 4 + 5) == "$45", 'Чему будет равно ( "$" + 4 + 5 )?');
+assert(("4" - 2) == 2, 'Чему будет равно ( "4" - 2 )?');
+assert(("4px" - 2) == Nan, 'Чему будет равно ( "4px" - 2 )?');
+assert((7 / 0) == Infinity, 'Чему будет равно ( 7 / 0 )?');
+assert(("  -9\n" + 5) == "  -9\n" + 5, 'Чему будет равно ( "  -9\n" + 5 )?');
+assert(("  -9\n" - 5) == -14, 'Чему будет равно ( "  -9\n" - 5 )?');
+assert((5 && 2) == 2, 'Чему будет равно ( 5 && 2 )?');
+assert((2 && 5) == 5, 'Чему будет равно ( 2 && 5 )?');
+assert((5 || 0) == 5, 'Чему будет равно ( 5 || 0 )?');
+assert((0 || 5) == 5, 'Чему будет равно ( 0 || 5 )?');
+assert((null + 1) == 1, 'Чему будет равно ( null + 1 )?');
+assert((undefined + 1) == 1, 'Чему будет равно ( undefined + 1 )?');
+assert((null == "\n0\n") == false, 'Чему будет равно ( null == "\n0\n" )?');
+assert((+null == +"\n0\n") == true, 'Чему будет равно ( +null == +"\n0\n" )?');
+
+</script>
+</body>
+</html>

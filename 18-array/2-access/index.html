@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <title>Доступ к элементам массива</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+1. Замените знак _ на соответсвующий индекс в assert-ах
+2. Найдите длинну массива products
+*/
+var _ = 10000;
+//               0         1        2      3          4
+var products = ['milk', 'bread', 'sugar', 'water', 'orange'];
+
+assert( products[ 1 ] == 'bread', 'Какой индекс у элемента "bread"?' );
+assert( products[ 3 ] == 'water', 'Какой индекс у элемента "water"?' );
+assert( products[ 0 ] == 'milk', 'Какой индекс у элемента "milk"?' );
+assert( products.length == 5, 'Какая длинна массива products? (кол-во элементов в нем)' )
+
+</script>
+</body>
+</html>

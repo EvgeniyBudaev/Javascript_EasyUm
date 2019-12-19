@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../assert/assert.css">
+    <script src="../../../assert/assert.js"></script>
+    <title>Подсчет очков игрока</title>
+</head>
+<body>
+<script>
+/*
+Задание
+Есть объект player с количеством очков за каждый раунд. 
+Напишите код функции которая выведет раунд с самым максимальным количеством очков.
+*/
+
+function bestScoresRound(player) {
+    // напишите код функции
+    // поиск максимального значения
+    let maxScore = 0;
+    let levelProp = '';
+    for (let prop in player) {
+        if (player[prop] > maxScore) {
+            maxScore = player[prop];
+            levelProp = prop;
+        }
+        return levelProp;
+    }
+}
+
+var player = {
+    "level1": 200,
+    "level2": 400,
+    "level3": 500,
+    "level4": 100
+};
+
+bestScoresRound(player);
+
+
+assert(bestScoresRound(player) == "level3", 'Лучший раунд level3');
+
+
+</script>
+</body>
+</html>

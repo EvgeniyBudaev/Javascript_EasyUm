@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../assert/assert.css">
+    <script src="../../../assert/assert.js"></script>
+    <title>Создайте объект</title>
+</head>
+<body>
+<script>
+/*
+Задание
+1. Создайте пустой объект user.
+2. Добавьте свойство name со значением Иван.
+3. Добавьте свойство surname со значением Пупкин.
+4. Добавьте свойство password со значение 12345
+*/
+
+var user = {
+    name: "Иван",
+    surname: "Пупкин",
+    password: 12345
+};
+
+
+assert(typeof(user) == 'object', 'Создайте объект user');
+assert(user.name && user.name == 'Иван', 'Свойство name должно содержать имя "Иван"');
+assert(user.surname && user.surname == 'Пупкин', 'Свойство surname должно содержать возраст равный "Пупкин"');
+assert(user.password && user.password == 12345, 'Свойство password должно содержать имя 12345');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Методы объектов</title>
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+</head>
+<body>
+<script>
+/*
+Задание.
+Значение this называется контекстом вызова и будет определено в момент вызова функции.
+Если одну и ту же функцию запускать в контексте разных объектов, она будет получать разный this.
+
+1. Свяжите функцию sayHello() с объектами user и admin, через свойство sayHi
+*/
+
+var user = {
+    firstName: "Ivan"
+};
+
+var admin = {
+    firstName: "Petya"
+}
+
+function sayHello() {
+    return "Привет, меня зовут " + self.firstName;
+}
+
+// Под этим комментарием связать функцию sayHello с объектами user и admin
+
+
+assert(user.sayHi() == "Привет, меня зовут Ivan", "Должна вернуться строка 'Привет, меня зовут Ivan!'");
+assert(admin.sayHi() == "Привет, меня зовут Petya", "Должна вернуться строка 'Привет, меня зовут Ivan!'");
+
+</script>
+</body>
+</html>

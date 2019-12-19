@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../assert/assert.css">
+    <script src="../../../assert/assert.js"></script>
+    <title>Подсчет очков игрока</title>
+</head>
+<body>
+<script>
+/*
+Задание
+Есть объект player с количеством очков за каждый раунд. 
+Напишите код функции для подсчета суммы всех очков игрока.
+Если объект пустой, то результат должен быть 0.
+*/
+
+function countPlayerScores(obj) {
+    // напишите код функции
+    // var sum = 0;
+    // for (var key in obj) {
+    //     sum = sum + obj[key];
+    // }
+    Object.values(obj).reduce(function (sum, el) {
+        sum += el;
+        return sum;
+    });
+    return sum;
+}
+
+var player = {
+    "level1": 200,
+    "level2": 400,
+    "level3": 100,
+    "level4": 500
+};
+
+var emptyPlayer = {};
+countPlayerScores(player);
+countPlayerScores(emptyPlayer);
+
+
+assert(countPlayerScores(player) == 1200, 'Количество очков должно быть равно 1200');
+assert(countPlayerScores(emptyPlayer) == 0, 'У пустого объекта количество очков равно 0')
+
+</script>
+</body>
+</html>

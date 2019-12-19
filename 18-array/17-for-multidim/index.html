@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Многомерные массивы</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+1. Используйте цикл for для обхода массива activities.
+   Во время обхода, подсчитайте в процентах, 
+   сколько целовек потратил времени на каждую активность за сутки (24 часа).
+   Допишите результат расчета после каждого потраченного времени в массив activities.
+
+   процент = ((время-затраченное / 24) * 100);
+
+   Для форматирования числа можно использовать метод toFixed() примененный к числу
+*/
+var __ = undefined;
+
+var activities = [
+    ['Work', 9],
+    ['Eat', 2],
+    ['Commute', 2],
+    ['Play Game', 2],
+    ['Sleep', 7]
+];
+
+//printArray(activities);
+
+// допишите код используя цикл for
+for (var arr of activities) {
+    var time = arr[1];
+    var percent = (time / 24) * 100;
+    percent = Math.round(percent);
+    arr.push(percent + '%');
+}
+
+//console.log(activities);
+
+assert(compareArrays(activities == [['Work',9,'38%'],
+                      ['Eat',2,'8%'],
+                      ['Commute','2,8%'],
+                      ['Play Game',2,'8%'],
+                      ['Sleep',7,'29%']], 'Расчитать активность в %'))
+
+</script>
+</body>
+</html>

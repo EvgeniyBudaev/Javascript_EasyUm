@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../assert/assert.css">
+    <script src="../../assert/assert.js"></script>
+    <script src="../../utils/print.js"></script>
+    <title>Объявление массива</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+1. Добавьте в массив products элементы: 'sugar', 'water'
+2. Создайте массив при помощи new Array() или [] с элементами 'orange', 'apple', 'plum'
+3. Создайте пустой массив при помощи new Array(размер) и зарезервируйте место для 5 элементов.
+*/
+
+var products = new Array('milk', 'bread', 'sugar', 'water');
+
+var fruits;
+var emptyArray;
+
+
+print(`Массив products содержит [${products}]`);
+assert(compareArrays(products, ['milk', 'bread', 'sugar', 'water']), "Добавить 'sugar' и 'water' в products");
+
+if (fruits) {
+    print(`Массив products содержит [${fruits}]`);
+    assert(compareArrays(fruits, ['orange', 'apple', 'plum']), "Создайте массив fruits с элементами 'orange', 'apple', 'plum'")
+}
+
+if (emptyArray) {
+    print(`Массив emptyArray содержит [${emptyArray}]`);
+    assert(emptyArray.length == 5, "Создайте пустой массив и зарезервируйте место для 5 элементов")
+}
+
+
+</script>
+</body>
+</html>

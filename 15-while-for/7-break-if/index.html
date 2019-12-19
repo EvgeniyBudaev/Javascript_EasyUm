@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Break if</title>
+</head>
+<body>
+<script>
+/*
+Задание.
+1. Запустите программу и убедитесь, что при каждом последующем повторении 
+   находится сумма арифметической прогрессии и при вводе 'y' происходит завершение программы.
+2. Перепешите программу чтобы она выводила каждое последующее значение факториала:
+   1! = 1
+   2! = 2
+   3! = 6
+   4! = 24
+   5! = 120
+   ...
+   Пока пользователь не остановит выполнение
+*/
+var i = 1;
+var result = 0;
+var choice = 'n';
+
+while (true) {
+    console.log('Переменная result равна: ', result);
+    choice = prompt('Завершить программу (y/n)?', '');
+    
+    if (choice == 'y') break;
+    result += i;
+    ++i;
+}
+</script>
+</body>
+</html>
